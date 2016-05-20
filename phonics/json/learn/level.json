@@ -1,0 +1,19 @@
+{
+	"levelList": [
+		{
+			"levelName": "level 1",
+			"levelDescription": "",
+			"wordList": ["apple", "ant", "rat", "jam"]
+					},
+		{
+			"levelName": "level 2",
+			"levelDescription": "",
+			"wordList": ["apple", "ant", "rat"]
+					},
+		{
+			"levelName": "level 3",
+			"levelDescription": "",
+			"wordList": ["apple", "ant", "rat", "jam"]
+					}
+				]
+}

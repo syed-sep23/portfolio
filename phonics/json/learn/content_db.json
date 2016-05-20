@@ -1,0 +1,37 @@
+{
+	"wordList": [
+		{
+			"wordid": "apple",
+			"text": "apple",
+			"description": "",
+			"sound": ["shorta", "shorte", "shortae"],
+			"word_audio": "apple",
+			"tagged_grades": "",
+			"image": "images/apple.png"
+		}, {
+			"wordid": "ant",
+			"text": "ant",
+			"description": "",
+			"sound": ["shorta", "shorte", "shortae"],
+			"word_audio": "ant",
+			"tagged_grades": "",
+			"image": "images/ant.png"
+		}, {
+			"wordid": "rat",
+			"text": "rat",
+			"description": "",
+			"sound": ["shorta", "shorte", "shortae"],
+			"word_audio": "rat",
+			"tagged_grades": "",
+			"image": "images/rat.png"
+		}, {
+			"wordid": "jam",
+			"text": "jam",
+			"description": "",
+			"sound": ["shorta", "shorte", "shortae"],
+			"word_audio": "jam",
+			"tagged_grades": "",
+			"image": "images/jam.png"
+		}
+        ]
+}

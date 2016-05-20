@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="lib/jquery-2.2.1.min.js"></script>
+<script type="text/javascript" src="lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/generate_JSON.js"></script>
+<script type="text/javascript" src="js/phonetic.js"></script>
+
+<body>
+	<div class="wrapper">
+		<header>
+			<div id="headContainer">
+				<a class="learn_bt" href="#"><img src="images/learn.png" width="134" height="59"></a>
+				<a class="quiz_bt" href="#"><img src="images/quiz.png" width="134" height="57"></a>
+				<div class="drop_box">
+					<label>
+						<select id="levelSelector"></select>
+					</label>
+				</div>
+				<a class="bt_1" onclick="popup1()" href="#"><img src="images/bt1.png" width="50" height="50"></a>
+				<a class="bt_2" onclick="popup2()" href="#"><img src="images/bt2.png" width="50" height="50"></a>
+			</div>
+		</header>
+		
+		<div class="assets_01">
+			<div class="asset_panel_01">
+				<div class="type_panel_01">
+					<div class="type_item_01"><span>Name : </span>
+						<input class="textbox" required type="text">
+					</div>
+					<div class="type_item_01">
+						<span>Level : </span>
+						<div class="select">
+							<span class="arr"></span>
+							<select id="asset_Selector">
+								<option value="null">SELECT LEVEL</option>
+							</select>
+						</div>
+					</div>
+					<div class="get_started_bt"><img src="images/getstarted_bt.png" width="174" height="59"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer"></div>
+
+		<div class="launch"></div>
+
+		<div id="learn" style="display:none;">
+			<div class="note_box">
+				<h3>Vowels are letter of the alphabet that are spoken with freely flowing breath through the mouth where the tongue does not touch the lips, teeth, or roof of the mouth.</h3>
+			</div>
+
+			<div class="phonics_tab_box">
+
+			</div>
+			<div class="letter_word_box">
+				<p class="letter_word_note"><i><b>Tap</b> a letter and word to hear its sound</i>.</p>
+				<div class="letter_word_box_shadow"></div>
+				<div class="letter_word_org">
+					<div class="letter_word_bt">
+						<img id="key_vowels" src="images/vowels.png" width="151" height="37">
+						<img id="moving_vowels" src="images/diphtongs.png" width="151" height="37">
+						<img id="consonants_01" src="images/consonants.png" width="151" height="37">
+					</div>
+					<span class="key_vowels vowelImgKeyboard">
+			<div class="letter_word_short">
+			<div class="letter_word_short_box">
+				<h2>Short Vowels</h2>
+				<article>
+				<div class="red">
+					<h3 id="shorta"><span>&#259;</span></h3>
+				</div>
+				<div class="pineapple">
+					<h3 id="shorte"><span>&#277;</span></h3></div>
+				<div class="arctic">
+					<h3 id="shorti"><span>&#301;</span></h3></div>
+				<div class="cantaloupe">
+					<h3 id="shorto"><span>&#335;</span></h3></div>
+				<div class="lime">
+					<h3 id="shortu"><span>&#365;</span></h3></div>
+				<div class="lilac">
+					<h3 id="shortae"><span>&aelig;</span></h3></div>
+				</article>
+			</div>
+		</div>
+		<div class="letter_word_Long">
+			<div class="letter_word_short_box">
+				<h2>Long Vowels</h2>
+				<article>
+					<div class="purple">
+						<h3 id="longa"><span>&#257;</span></h3></div>
+					<div class="chartreuse">
+						<h3 id="longe"><span>&#275;</span></h3></div>
+					<div class="watermelon">
+						<h3 id="longi"><span>&#299;</span></h3></div>
+					<div class="tiger">
+						<h3 id="longo"><span>&#333;</span></h3></div>
+					<div class="sky">
+						<h3 id="longu"><span>&#363;</span></h3></div>
+					<div class="canary">
+						<h3 id="longae"><span>&#652;</span></h3></div>
+				</article>
+			</div>
+		</div>
+		</span>
+		<div class="moving_vowels vowelImgKeyboard" style="display: none;">
+			<div class="letter_word_short_box">
+				<article>
+					<div class="red">
+						<h3 id="diphthongsa"><span>&#259;</span></h3></div>
+					<div class="pineapple">
+						<h3 id="diphthongse"><span>&#277;</span></h3></div>
+					<div class="arctic">
+						<h3 id="diphthongsi"><span>&#301;</span></h3></div>
+					<div class="cantaloupe">
+						<h3 id="diphthongso"><span>&#335;</span></h3></div>
+					<div class="lime">
+						<h3 id="diphthongsu"><span>&#365;</span></h3></div>
+					<div class="lilac">
+						<h3 id="diphthongsae"><span>&aelig;</span></h3></div>
+				</article>
+			</div>
+		</div>
+
+		<div class="consonants_01 vowelImgKeyboard" style="display: none;">
+			<div class="letter_word_short_box">
+				<article>
+					<div class="red">
+						<h3 id="consonantsp"><span>p</span></h3></div>
+					<div class="pineapple">
+						<h3 id="consonantsb"><span>b</span></h3></div>
+					<div class="arctic">
+						<h3 id="consonantst"><span>t</span></h3></div>
+					<div class="cantaloupe">
+						<h3 id="consonantsd"><span>d</span></h3></div>
+					<div class="lime">
+						<h3 id="consonantsg"><span>g</span></h3></div>
+					<div class="lilac">
+						<h3 id="consonantsf"><span>f</span></h3></div>
+					<div class="purple">
+						<h3 id="consonantsv"><span>v</span></h3></div>
+					<div class="chartreuse">
+						<h3 id="consonantss"><span>s</span></h3></div>
+					<div class="watermelon">
+						<h3 id="consonantsz"><span>z</span></h3></div>
+					<div class="tiger">
+						<h3 id="consonantsm"><span>m</span></h3></div>
+					<div class="sky">
+						<h3 id="consonantsn"><span>n</span></h3></div>
+					<div class="canary">
+						<h3 id="consonantsl"><span>l</span></h3></div>
+					<div class="cantaloupe">
+						<h3 id="consonantsw"><span>w</span></h3></div>
+					<div class="lime">
+						<h3 id="consonantsr"><span>r</span></h3></div>
+					<div class="watermelon">
+						<h3 id="consonantsh"><span>h</span></h3></div>
+					<div class="lime">
+						<h3 id="consonantsj"><span>j</span></h3></div>
+					<div class="arctic">
+						<h3 id="consonantsk"><span>k</span></h3></div>
+					<div class="purple">
+						<h3 id="consonantsn"><span>n</span></h3></div>
+					<div class="lime">
+						<h3 id="consonants643"><span>&#643;</span></h3></div>
+					<div class="chartreuse">
+						<h3 id="consonants658"><span>&#658;</span></h3></div>
+					<div class="red">
+						<h3 id="consonantstheta"><span>&theta;</span></h3></div>
+					<div class="cantaloupe">
+						<h3 id="consonantsotilde"><span>&otilde;</span></h3></div>
+					<div class="lime">
+						<h3 id="consonants643"><span>t&#643;</span></h3></div>
+					<div class="lime">
+						<h3 id="consonants622"><span>&#622;</span></h3></div>
+				</article>
+			</div>
+		</div>
+		<div class="word_box_boybg"><img src="images/boy_fa.png" width="157" height="169"></div>
+		<div class="letter_word_box_arrowRight"> </div>
+	</div>
+		<div class="letter_word_box_arrow"></div>
+	</div>
+	</div>
+
+	<div id="quiz">
+		<div id="pagenav" class="numeric_panel">
+			<ul id='pageNum'></ul>
+		</div>
+	</div>
+	</div>
+
+	<!-- Popup -->
+	<div id="overlayLaunch1" class="overlay">
+		<div class="Pop_close">
+			<h3>How to use</h3> <a onClick="closePopup()">X</a>
+		</div>
+		<div id="popupBox1" class="popupBox">
+			<p>Your Content here</p>
+		</div>
+	</div>
+	
+	<div id="overlayLaunch2" class="overlay">
+		<div class="Pop_close">
+			<h3>How to use</h3> <a onClick="closePopup()">X</a>
+		</div>
+		<div id="popupBox2" class="popupBox">
+			<p>Your Content here</p>
+		</div>
+	</div>
+</body>
+
+</html>
